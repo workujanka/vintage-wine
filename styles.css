@@ -1,0 +1,157 @@
+/* 1. GLOBAL STYLES */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Georgia', serif; /* Serif fonts look more "classic/expensive" */
+    background-color: #fdfaf5; /* Creamy white for a vintage feel */
+    color: #2d2d2d;
+    line-height: 1.8;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 2. NAVBAR & BUTTONS */
+
+.navbar {
+    background-color: #4a0e0e; /* Deep Wine Red */
+    color: #d4af37; /* Gold accent */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Flexbox for navbar layout */
+.flex-header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+
+/* Login Button */
+/*
+.login-btn {
+    background-color: transparent;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #d4af37;
+    color: #4a0e0e;
+}
+*/
+
+/* 3. CARD DESIGN (Consistent spacing for all sections) */
+.card {
+    background: white;
+    padding: 40px; /*meaning: 40px on top and bottom, 40px on left and right */
+    margin: 30px 0; /*meaning: 30px on top and bottom, 0px on left and right */
+    border-radius: 4px; /*meaning: 4px rounded corners */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /*meaning: subtle shadow for depth */
+}
+
+h2 {
+    color: #4a0e0e;
+    border-bottom: 2px solid #d4af37; /*Use case: underline section titles with a gold line */
+    display: inline-block; /*Use case: makes the border only as wide as the text */
+    margin-bottom: 20px; /*Use case: adds space between the title and the content below */
+}
+
+/* 4. TABLE STYLING */
+.wine-table {
+    width: 100%;
+    border-collapse: collapse; /*Use case: removes space between table cells for a cleaner look */
+    margin-top: 20px; /*Use case: adds space between the table and the content above it */
+}
+
+.wine-table th {
+    background-color: #f8f1f1;
+    text-align: left;
+    padding: 15px; /*Use case: adds space inside table headers for better readability */
+    border-bottom: 2px solid #4a0e0e; /*Use case: adds a border under table headers */
+}
+
+.wine-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* 5. FORM & SELECTION STYLING */
+.form-section {
+    margin-bottom: 25px; /*Use case: adds space between different form sections for better organization */
+}
+
+.form-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px; /*Use case: adds space between the section title and the options below it */
+}
+
+label {
+    display: block; /* Puts each choice on a new line */
+    margin-bottom: 8px; /* Adds space between choices */
+    cursor: pointer; /* Changes cursor to pointer on hover for better UX */
+}
+
+.styled-select { /* Use case: styles the dropdown select element for a more cohesive look with the rest of the site */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-order { /* Use case: styles the submit button for a more cohesive look with the rest of the site */
+    background-color: #4a0e0e;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.about-img { /* Use case: styles the image in the about section to fit nicely next to the text. This is too big, we need to make it smaller and more consistent with the rest of the design. Please suggest the dimensions as needed. */
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.about-flex {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: #777;
+}

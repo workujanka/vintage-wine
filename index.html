@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vintage Cellar | Fine Wines</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- SECTION: WELCOME PAGE (Header & Hero) -->
+    <!-- Navigation provides site structure; buttons are for primary actions like logging in -->
+    <header class="navbar">
+        <div class="container flex-header">
+            <h1 class="logo">Vintage Cellar</h1>
+            <nav>
+                <a href="#about">Our Story</a>
+                <a href="#pricing">Collection</a>
+                <a href="#order">Order</a>
+                <!-- LOGIN BUTTON: Used for user authentication -->
+                <button class="login-btn">Login</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- SECTION: ABOUT PAGE (Introduction) -->
+        <!-- Use a card layout to separate the 'brand story' from the rest of the content -->
+        <section id="about" class="card">
+            <h2>Our Story</h2>
+            <div class="about-flex">
+                <p>Since 1924, The Vintage Cellar has sourced the finest grapes from the heart of Tuscany. We believe every bottle tells a story of the soil, the weather, and the hands that harvested it.</p>
+                <img src="images/logo.png" width="200" alt="Vintage Cellar Logo">
+            </div>
+        </section>
+
+        <!-- SECTION: PRICING TABLE -->
+        <!-- Tables are ideal for displaying structured data like prices and descriptions -->
+        <section id="pricing" class="card"> /* Use case: This section uses a table to display the current wine collection, including name, region, year, and price. Tables are ideal for structured data like this. */
+            <h2>Our Current Collection</h2>
+            <table class="wine-table">
+                <thead>
+                    <tr>
+                        <th>Wine Name</th>
+                        <th>Region</th>
+                        <th>Year</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cabernet Sauvignon</td>
+                        <td>Bordeaux</td>
+                        <td>2018</td>
+                        <td>$85.00</td>
+                    </tr>
+                    <tr>
+                        <td>Pinot Grigio</td>
+                        <td>Veneto</td>
+                        <td>2021</td>
+                        <td>$42.00</td>
+                    </tr>
+                    <tr>
+                        <td>Merlot Reserve</td>
+                        <td>Napa Valley</td>
+                        <td>2015</td>
+                        <td>$120.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SECTION: ORDER PREFERENCES (Checkboxes, Radio Buttons, Dropdowns) -->
+        <!-- Forms collect user data. Labels must be linked to IDs for accessibility -->
+        <section id="order" class="card"> /* Use case: This section allows users to customize their wine order preferences using checkboxes for flavor profiles, radio buttons for bottle size, and a dropdown for delivery region. Forms are essential for collecting user input. */
+            <h2>Custom Order Preferences</h2>
+            <form class="wine-form"> 
+                
+                <!-- CHECKBOXES: Used when the user can select multiple options -->
+                <div class="form-section">
+                    <h3>Select Flavors (Select many)</h3>
+                    <label><input type="checkbox" name="flavor" value="fruity"> Fruity</label> // Note: Each checkbox should have a unique value for backend processing. name can be the same if they belong to the same group, but value must differ to identify which options were selected.
+                    <label><input type="checkbox" name="flavor" value="oak"> Oaky</label>
+                    <label><input type="checkbox" name="flavor" value="earthy"> Earthy</label>
+                </div>
+
+                <!-- RADIO BUTTONS: Used when the user can only choose ONE option -->
+                <div class="form-section">
+                    <h3>Bottle Size (Choose one)</h3>
+                    <label><input type="radio" name="size" value="standard"> Standard (750ml)</label>
+                    <label><input type="radio" name="size" value="magnum"> Magnum (1.5L)</label>
+                </div>
+
+                <!-- DROP DOWN (Select): Used to save space when choosing from a list -->
+                <div class="form-section">
+                    <h3>Delivery Region</h3>
+                    <select class="styled-select">
+                        <option value="">-- Choose your country --</option>
+                        <option value="denmark">Denmark</option>
+                        <option value="ethiopia">Ethiopia</option>
+                        <option value="sweden">Sweden</option>
+                        <option value="norway">Norway</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-order">Inquire About Stock</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 The Vintage Cellar. Please drink responsibly.</p>
+    </footer>
+
+</body>
+</html>
