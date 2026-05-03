@@ -1,13 +1,13 @@
 /* 1. GLOBAL STYLES */
 
 
-* {
+* { /* Use case: This universal selector applies box-sizing: border-box to all elements, which makes it easier to manage padding and borders without affecting the overall width and height of elements. It also resets margin and padding to 0 for a clean slate. */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
+/* 
 body {
     font-family: 'Georgia', serif; /* Serif fonts look more "classic/expensive" */
     background-color: #fdfaf5; /* Creamy white for a vintage feel */
@@ -142,16 +142,17 @@ label {
     border-radius: 8px;
 }
 
-.about-flex {
-    display: flex;
-    gap: 30px;
+.about-flex { /* Use case: uses flexbox to layout the about section with text on one side and an image on the other. This creates a more dynamic and visually appealing layout compared to stacking them vertically. */
+    display: flex; /* display: flex; turns the container into a flexbox, allowing for flexible layouts */
+    gap: 30px; /* gap: 30px; adds space between the text and the image for better readability */
     align-items: center;
 }
 
 /* FOOTER */
-.footer {
+/* Use case: styles the footer to be centered and visually distinct from the main content. The smaller font size and lighter color help it blend into the background while still being readable. */
+.footer { 
     text-align: center;
     padding: 40px;
-    font-size: 0.8rem;
+    font-size: 0.8rem; /* rem is a relative unit that scales with the root font size, making it more responsive */
     color: #777;
 }
